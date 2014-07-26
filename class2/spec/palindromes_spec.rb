@@ -1,11 +1,5 @@
-require 'lib/palindromes'
-require 'rspec'
-
-RSpec.configure do |config|
-  config.color = true
-  config.tty = true
-  config.formatter = :documentation
-end
+require 'palindromes'
+require 'spec_helper'
 
 describe Fixnum do
   it 'should return a 1,3' do
