@@ -1,6 +1,14 @@
 class Array
 
   def group_by1
-    return {1=>[1, 4], 2=>[2, 5], 0=>[3, 6]}
+    result = Hash.new
+
+    self.each do |e|
+      key = yield e
+      result[key] = result[key] || []
+      result[key] << e
+    end
+
+    result
   end
 end
