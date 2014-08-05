@@ -1,8 +1,8 @@
 class Array
 
   def group_by1
-    result = Hash.new
 
+    result = Hash.new
     self.each do |e|
       key = yield e
       result[key] = result[key] || []
